@@ -39,27 +39,27 @@ const Index = () => {
 
   const mainDirections = [
     {
-      title: "Классическая хореография",
-      description: "Основа основ — развиваем грацию, осанку и дисциплину через классический танец",
-      icon: "Sparkles"
+      title: "1 класс",
+      description: "Мягкая адаптация к школе, где каждый ребёнок чувствует себя в безопасности",
+      icon: "BookOpen"
     },
     {
-      title: "Современный танец",
-      description: "Свобода движения и самовыражение — учим чувствовать музыку и своё тело",
-      icon: "Music"
+      title: "2-3 классы",
+      description: "Развитие самостоятельности и уверенности через индивидуальный подход",
+      icon: "Users"
     },
     {
-      title: "Детская хореография",
-      description: "Мягкое введение в мир танца для самых маленьких — через игру и радость",
-      icon: "Baby"
+      title: "4 класс",
+      description: "Подготовка к переходу в среднюю школу с сильной базой знаний",
+      icon: "GraduationCap"
     }
   ];
 
   const additionalDirections = [
-    { title: "Растяжка и гибкость", icon: "Waves" },
-    { title: "Ритмика для малышей", icon: "PartyPopper" },
-    { title: "Подготовка к выступлениям", icon: "Star" },
-    { title: "Индивидуальные занятия", icon: "User" }
+    { title: "Без домашних заданий", icon: "CheckCircle" },
+    { title: "Группы до 10 человек", icon: "Users" },
+    { title: "Сильная программа", icon: "Award" },
+    { title: "Психологическая поддержка", icon: "Heart" }
   ];
 
   const testimonials = [
@@ -136,12 +136,12 @@ const Index = () => {
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#advantages" className="text-gray-700 hover:text-primary transition-colors">Преимущества</a>
-            <a href="#directions" className="text-gray-700 hover:text-primary transition-colors">Направления</a>
+            <a href="#directions" className="text-gray-700 hover:text-primary transition-colors">Классы</a>
             <a href="#testimonials" className="text-gray-700 hover:text-primary transition-colors">Отзывы</a>
             <a href="#team" className="text-gray-700 hover:text-primary transition-colors">Команда</a>
             <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Контакты</a>
           </nav>
-          <Button className="hidden md:block">Записаться</Button>
+          <Button className="hidden md:block">Записаться на пробный день</Button>
         </div>
       </header>
 
@@ -149,22 +149,21 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
+              <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                Школа будущего в г. Владивостоке
+              </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Школа, где дети<br />
-                <span className="text-primary">танцуют с радостью</span>
+                Открыт набор в <span className="text-primary">1-4 классы</span><br />
+                на 2025-2026 учебный год
               </h1>
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Без давления, без страха, без сравнения.<br />
-                Только внимание, тепло и профессионализм.
+                Запишитесь на БЕСПЛАТНЫЙ день<br />
+                и получите скидку на месяц занятий
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-lg px-8">
                   <Icon name="Calendar" className="mr-2" size={20} />
-                  Записаться на занятие
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
-                  <Icon name="Play" className="mr-2" size={20} />
-                  Смотреть видео
+                  Записаться на пробный день
                 </Button>
               </div>
             </div>
@@ -202,8 +201,8 @@ const Index = () => {
 
       <section id="directions" className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">Основные направления</h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">Выберите то, что откликается вашему ребёнку</p>
+          <h2 className="text-4xl font-bold text-center mb-4">Классы начальной школы</h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">Обучение с 1 по 4 класс в комфортной атмосфере</p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {mainDirections.map((direction, index) => (
@@ -220,7 +219,7 @@ const Index = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold text-center mb-8">Дополнительные направления</h3>
+            <h3 className="text-2xl font-semibold text-center mb-8">Наши преимущества</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {additionalDirections.map((item, index) => (
                 <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105">
@@ -403,7 +402,7 @@ const Index = () => {
               </div>
               <span className="text-2xl font-bold">Голубой Лотос</span>
             </div>
-            <p className="text-gray-400">© 2024 Школа танцев. Все права защищены.</p>
+            <p className="text-gray-400">© 2024 Начальная школа Голубой Лотос. Все права защищены.</p>
           </div>
         </div>
       </footer>
